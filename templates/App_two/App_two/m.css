@@ -1,0 +1,17 @@
+.s{
+  background: linear-gradient(to right, rgb(61, 58, 50), black);
+padding-bottom: 20px;
+}
+a:active {
+   background-color: red;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+html,body{
+  background-image: url('job.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}

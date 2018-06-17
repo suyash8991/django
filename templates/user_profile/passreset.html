@@ -1,0 +1,23 @@
+{% extends 'main.html' %}
+{% block s%}
+<form method="post">
+  {% csrf_token %}
+  <label><strong>Username:  </strong> </label>
+  {{request.user.username}}
+  <br>
+  <label><strong>First name:  </strong></label>
+  {{request.user.first_name}}
+<br>
+<label><strong>Last name:  </strong> </label>
+  {{request.user.last_name}}
+  {{ form.as_p }}
+  {% if messages %}
+  <ul class="messages">
+    {% for message in messages %}
+      <li class="{{ message.tags }}">{{ message }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  <button type="submit">Save changes</button>
+</form>
+{% endblock %}

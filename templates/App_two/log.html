@@ -1,0 +1,21 @@
+{%extends 'main.html'%}
+<html lang="en" dir="ltr">
+  <head>
+    	{% load static %}
+
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+{%block s%}
+<link rel="stylesheet" type="text/css" href="{% static 'App_two/log.css' %}">
+    <form class="container sd" method="post">
+
+
+    {%csrf_token%}
+    {{f.as_p}}
+    <input type="submit"id="hover" value='Login'>
+      </form>
+      {%endblock %}
+  </body>
+</html>

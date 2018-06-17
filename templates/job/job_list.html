@@ -1,0 +1,72 @@
+{%extends 'main.html'%}
+<html lang="en" dir="ltr">
+  <head>
+    {%load static%}
+    <meta charset="utf-8">
+    <title></title>
+
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+
+{%block s%}
+<body style="background-color:black;!important">
+
+<link rel="stylesheet" href="{%static 'job/display.css'%}">
+
+<div class="center">
+  <div class="row">
+    <div class="col"><h2>Company</h2>
+    </div>
+    <div class="col">
+    <h2>Job Post</h2>
+    </div>
+
+     <div class="w-100"></div>
+  {% for job in job_list %}
+
+  <div class="col"><p style="font-family:Times New Roman;font-size:25px;">{{job.company_name}}</p></div>
+  <div class="col"><a href="{{job.id}}" style="font-family:Times New Roman;font-size:20px;">{{job.job_description}}</a></div>
+
+ <div class="w-100"></div>
+ <hr style="display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 2px;">
+  {%endfor%}
+</div>
+
+    {% if is_paginated %}
+  <ul class="pagination" style=" margin: auto;
+    width: 50%; ">
+    {% if page_obj.has_previous %}
+      <li><a href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+    {% else %}
+      <li class="disabled"><span>&laquo;</span></li>
+    {% endif %}
+    {% for i in paginator.page_range %}
+      {% if page_obj.number == i %}
+        <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+      {% else %}
+        <li><a href="?page={{ i }}">{{ i }}</a></li>
+      {% endif %}
+    {% endfor %}
+    {% if page_obj.has_next %}
+      <li><a href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+    {% else %}
+      <li class="disabled"><span>&raquo;</span></li>
+    {% endif %}
+  </ul>
+  </div>
+</div>
+
+{% endif %}
+</div>
+
+
+
+{%endblock%}
+  </body>
+</html>

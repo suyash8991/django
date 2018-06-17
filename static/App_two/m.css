@@ -1,0 +1,28 @@
+.s{
+  background: black;
+padding-top: 20px;
+  padding-bottom:  20px;
+}
+.star{
+font-style: italic;
+font-family:'Do Hyeon', sans-serif;
+font-size:250% !important;
+text-align: left;
+
+}
+.star:hover{
+  color:rgb(249, 29, 17);
+}
+
+body,html{
+    background-image: url('images.jpg') ;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.design:hover{
+
+   background: linear-gradient(#e0ded9,#02892d);
+
+   transition-delay: 2s;
+}

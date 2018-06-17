@@ -1,0 +1,20 @@
+{%extends 'main.html'%}
+<html lang="en" dir="ltr">
+<head>
+
+  <meta charset="utf-8">
+  <title></title>
+</head>
+  <body>
+{%block s%}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'App_two/register.css' %}">
+    <form class="container sd" method="post">
+      {%csrf_token%}
+      {{user_form.as_ul}}
+      {{profile_form.as_p}}
+      <input type="submit" class="mymove "id="hover">
+    </form>
+    {%endblock%}
+  </body>
+</html>

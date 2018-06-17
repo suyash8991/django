@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="{% static 'App_two/muv.css' %}">
+
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+	<div class ="sd "  >
+		<h2 id="title">The Movie reviewer</h2>
+		<img  id="logo" src="{% static "App_two/images.jpg" %}" alt="My image">
+		<form id="form"  >
+ <label class="font">First name</label>
+ <br>
+ <br>
+  <input class="inputstyle"  type="text" name="firstname">
+  <br>
+  <br>
+
+  <label class="font">Last name</label>
+   <br>
+   <br>
+  <input  class="inputstyle" type="text" name="lastname"><br><br>
+   <label  class="font">Email id</label><br>
+   <br>
+  <input class="inputstyle" type="Email"   name="email">
+  <br>
+  <br>
+  <label class="font">Password</label>
+  <br><br>
+  <input class="inputstyle" type="Password" name="Password">
+
+  <button id="hover" >Login</button>
+		</form>
+</div>
+</body>
+</html>
